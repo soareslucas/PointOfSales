@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-schema="public" match-name="address"/>
+  <table-filter match-schema="public" match-name="bankdata"/>
+  <table-filter match-schema="public" match-name="brand"/>
+  <table-filter match-schema="public" match-name="category"/>
+  <table-filter match-schema="public" match-name="category_has_subcategory"/>
+  <table-filter match-schema="public" match-name="contact"/>
+  <table-filter match-schema="public" match-name="itemtype"/>
+  <table-filter match-schema="public" match-name="person"/>
+  <table-filter match-schema="public" match-name="product"/>
+  <table-filter match-schema="public" match-name="subcategory"/>
+  <table-filter match-schema="public" match-name="supplier"/>
+  <table-filter match-schema="public" match-name="supplier_has_address"/>
+  <table-filter match-schema="public" match-name="supplier_has_bankdata"/>
+  <table-filter match-schema="public" match-name="supplier_has_contact"/>
+  <table-filter match-schema="public" match-name="suppliertype"/>
+  <table-filter match-schema="public" match-name="unit"/>
+</hibernate-reverse-engineering>
