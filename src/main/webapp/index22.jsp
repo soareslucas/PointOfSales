@@ -19,7 +19,7 @@ function Redirecionar(){
 
 function novoProduto(){
 		
-	window.location.href = "product/new";
+	window.location.href = "brand/new";
 }
 
 

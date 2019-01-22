@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Ponto de Vendas</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="static/vendors/iconfonts/mdi/font/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="static/vendors/css/vendor.bundle.base.css">
-  <link rel="stylesheet" href="static/vendors/css/vendor.bundle.addons.css">
+  <link rel="stylesheet" href="view/static/vendors/iconfonts/mdi/font/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="view/static/vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="view/static/vendors/css/vendor.bundle.addons.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="static/css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="view/static/css/vertical-layout-light/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="static/images/logo-mini.png" />
+  <link rel="shortcut icon" href="view/static/images/logo-mini.png" />
 </head>
 <body class="sidebar-mini">
   <div class="container-scroller">
@@ -41,8 +41,8 @@
           </li>
         </ul>
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo" href="index.html"><img src="static/images/logo.png" alt="logo"/></a>
-          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="static/images/logo-mini.png" alt="logo"/></a>
+          <a class="navbar-brand brand-logo" href="index.html"><img src="view/static/images/logo.png" alt="logo"/></a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="view/static/images/logo-mini.png" alt="logo"/></a>
         </div>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown">
@@ -88,7 +88,7 @@
           </li>
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="static/images/faces/face5.jpg" alt="profile"/>
+              <img src="view/static/images/faces/face5.jpg" alt="profile"/>
               <span class="nav-profile-name">José Roberto</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
@@ -113,21 +113,21 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="index.jsp">
               <i class="mdi mdi-home menu-icon"></i>
               <span class="menu-title">Início</span>
             </a>
           </li>
 		  
 		  <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="pdv/new">
               <i class="mdi mdi-cash-multiple menu-icon"></i>
               <span class="menu-title">PDV</span>
             </a>
           </li>
 		  
   		  <li class="nav-item">
-            <a class="nav-link" href="produto/new">
+            <a class="nav-link" href="product/new">
               <i class="mdi mdi-stocking menu-icon"></i>
               <span class="menu-title">Estoque</span>
             </a>
@@ -141,11 +141,11 @@
             </a>
             <div class="collapse" id="catalog">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/product.html">Produtos</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/category.html">Categorias</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/itemtype.html">Tipos de Item</a></li>
-				<li class="nav-item"> <a class="nav-link" href="pages/ui-features/unit.html">Unidades de medida</a></li>
-				<li class="nav-item"> <a class="nav-link" href="pages/ui-features/brand.html">Marcas</a></li>
+                <li class="nav-item"> <a class="nav-link" href="product/new">Produtos</a></li>
+                <li class="nav-item"> <a class="nav-link" href="category/list">Categorias</a></li>
+                <li class="nav-item"> <a class="nav-link" href="itemtype/list">Tipos de Item</a></li>
+				<li class="nav-item"> <a class="nav-link" href="unit/list">Unidades de medida</a></li>
+				<li class="nav-item"> <a class="nav-link" href="brand/new">Marcas</a></li>
               </ul>
             </div>
           </li>
@@ -175,17 +175,17 @@
             </a>
             <div class="collapse" id="sales">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/client.html">Clientes</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/budget.html">Orçamentos</a></li>
-				<li class="nav-item"> <a class="nav-link" href="pages/ui-features/order.html">Pedidos</a></li>
-				<li class="nav-item"> <a class="nav-link" href="pages/ui-features/devolutions.html">Devoluções</a></li>
-				<li class="nav-item"> <a class="nav-link" href="pages/ui-features/paymenttype.html">Tipos de pagamento</a></li>
+                <li class="nav-item"> <a class="nav-link" href="client/list">Clientes</a></li>
+                <li class="nav-item"> <a class="nav-link" href="budge/list">Orçamentos</a></li>
+				<li class="nav-item"> <a class="nav-link" href="order/list">Pedidos</a></li>
+				<li class="nav-item"> <a class="nav-link" href="devolution/list">Devoluções</a></li>
+				<li class="nav-item"> <a class="nav-link" href="paymenttype/list">Tipos de pagamento</a></li>
               </ul>
             </div>
           </li>
           
   		  	<li class="nav-item">
-            <a class="nav-link" href="produto/new">
+            <a class="nav-link" href="report">
               <i class="mdi mdi-chart-bar menu-icon"></i>
               <span class="menu-title">Relatórios</span>
             </a>
@@ -193,6 +193,8 @@
 		  
         </ul>
       </nav>
+      
+      
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
@@ -269,8 +271,8 @@
                         <i class="mdi mdi-account-multiple mdi-36px"></i>
                         <p class="font-weight-medium mt-2">PDV</p>
                       </div>
-                      <h1 class="font-weight-light">ABRIR</h1>
-                      <h1 class="font-weight-light">CAIXA</h1>
+<!--                       <h1 class="font-weight-light">ABRIR</h1> -->
+<!--                       <h1 class="font-weight-light">CAIXA</h1> -->
                       <button type="button" class="btn btn-inverse-primary btn-rounded btn-icon">
                           <i class="mdi mdi-trending-up"></i>
                         </button>
@@ -285,7 +287,7 @@
                         <i class="mdi mdi-chart-pie mdi-36px"></i>
                         <p class="font-weight-medium mt-2">Estoque</p>
                       </div>
-                      <h1 class="font-weight-light">ENTRAR PRODUTO</h1>
+<!--                       <h1 class="font-weight-light">ENTRAR PRODUTO</h1> -->
                       
                       <button type="button" class="btn btn-inverse-danger btn-icon">
                           <i class="mdi mdi-plus"></i>
@@ -300,7 +302,7 @@
                         <i class="mdi mdi-car mdi-36px"></i>
                         <p class="font-weight-medium mt-2">Fornecedores</p>
                       </div>
-                      <h1 class="font-weight-light">CADASTRAR FORNECEDORES</h1>
+<!--                       <h1 class="font-weight-light">CADASTRAR FORNECEDORES</h1> -->
                       
                       <button type="button" class="btn btn-inverse-info btn-icon">
                           <i class="mdi mdi-plus"></i>
@@ -316,7 +318,7 @@
                         <i class="mdi mdi-verified mdi-36px"></i>
                         <p class="font-weight-medium mt-2">Usuários</p>
                       </div>
-                      <h1 class="font-weight-light">CADASTRAR USUÁRIOS</h1>
+<!--                       <h1 class="font-weight-light">CADASTRAR USUÁRIOS</h1> -->
                       
                       <button type="button" class="btn btn-inverse-success btn-icon">
                           <i class="mdi mdi-plus"></i>
@@ -462,20 +464,20 @@
   <!-- container-scroller -->
 
   <!-- plugins:js -->
-  <script src="static/vendors/js/vendor.bundle.base.js"></script>
-  <script src="static/vendors/js/vendor.bundle.addons.js"></script>
+  <script src="view/static/vendors/js/vendor.bundle.base.js"></script>
+  <script src="view/static/vendors/js/vendor.bundle.addons.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
   <!-- End plugin js for this page-->
   <!-- inject:js -->
-  <script src="static/js/off-canvas.js"></script>
-  <script src="static/js/hoverable-collapse.js"></script>
-  <script src="static/js/template.js"></script>
-  <script src="static/js/settings.js"></script>
-  <script src="static/js/todolist.js"></script>
+  <script src="view/static/js/off-canvas.js"></script>
+  <script src="view/static/js/hoverable-collapse.js"></script>
+  <script src="view/static/js/template.js"></script>
+  <script src="view/static/js/settings.js"></script>
+  <script src="view/static/js/todolist.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="static/js/dashboard.js"></script>
+  <script src="view/static/js/dashboard.js"></script>
   <!-- End custom js for this page-->
 </body>
 
