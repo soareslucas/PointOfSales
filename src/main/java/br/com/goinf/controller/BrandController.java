@@ -8,12 +8,11 @@ import br.com.goinf.entities.Brand;
 
 
 @Controller
-@RequestMapping("/brand")
 public class BrandController {
 	
 
 	
-@RequestMapping("new")
+@RequestMapping("newBrand")
 public String form() {
 return "brand/new";
 }
