@@ -46,10 +46,10 @@
                   <p class="card-description">
                     Cadastro Nova Marca
                   </p>
-                  <form class="forms-sample" method="post" action="add">
+                  <form class="forms-sample" method="post" action="addBrand">
                     <div class="form-group">
                       <label for="exampleInputUsername1">Nome</label>
-                      <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Nome da Marca">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Nome da Marca">
                     </div>
        
                     <button type="submit" class="btn btn-primary mr-2">Cadastrar</button>

@@ -5,6 +5,8 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 
 import br.com.goinf.entities.Brand;
+import br.com.goinf.DAO.BrandDAO;
+
 
 
 @Controller
@@ -18,15 +20,16 @@ return "brand/new";
 }
 
 
- @RequestMapping("add")
+ @RequestMapping("addBrand")
  public ModelAndView add(Brand brand) {
 	 
      ModelAndView mv = null;
      if(brand.getName() == null || brand.getName().equals("")) {
 	     mv = new ModelAndView("brand/new");
      } else{
-	     mv = new ModelAndView("brand/added");
-	     mv.addObject("brand", brand);
+    	 
+    	 BrandDAO brandDAO = new BrandDAO();
+    	 brandDAO.persist(brand);
      }
      return mv;
 
