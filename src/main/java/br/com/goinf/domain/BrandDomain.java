@@ -30,6 +30,18 @@ public class BrandDomain {
 		return getBrandDAO().findAll();
 	}
 	
+	public void delete(Brand brand) {
+		getBrandDAO().remove(brand);
+	}
+	
+	public Brand load(int idBrand) {
+		return getBrandDAO().getById(idBrand);
+	}
+	
+	public void update(Brand brand) {
+		getBrandDAO().merge(brand);
+	}
+	
 	
 	
 

@@ -1,3 +1,5 @@
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,18 +25,40 @@
 		
 			<div class="main-panel">        
 			  <div class="content-wrapper">
+			  
+			  
+   			    <%@ include file="../../message.jsp" %>	    
+			  
 			    <div class="row">
-			      <div class="col-md-6 grid-margin stretch-card">
+			      <div class="col-12 grid-margin stretch-card">
 			        <div class="card">
 			          <div class="card-body">
-			            <h4 class="card-title">Marca</h4>
-			            <p class="card-description">
-			              Cadastro Nova Marca
-			            </p>
-			            <form id="brandForm" class="forms-sample" method="post" action="addBrand">
+
+						<nav aria-label="breadcrumb">
+	                      <ol class="breadcrumb breadcrumb-custom">
+	                        <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
+	                        <li class="breadcrumb-item"><a href="brandList">Lista de Marcas</a></li>
+	                        <li aria-current="page" class="breadcrumb-item active"><span>Cadastro de Marcas</span></li>
+	                      </ol>
+	                    </nav>
+	                    
+	                    
+			            <form id="brandForm" class="forms-sample" method="post" action="${not empty action ? action : 'addBrand'}">
 			              <div class="form-group">
 			                <label for="exampleInputUsername1">Nome</label>
-			                <input type="text" class="form-control" id="name" name="name" placeholder="Nome da Marca">
+			                
+			                
+			                
+			                <c:choose>
+								<c:when test="${not empty brand.name}">
+			                		<input type="text" value="${brand.name}" class="form-control" id="name" name="name" placeholder="Nome da Marca">
+								</c:when>
+								<c:otherwise>
+			                		<input type="text" class="form-control" id="name" name="name" placeholder="Nome da Marca">
+								</c:otherwise>
+							</c:choose>
+			                
+			                
 			              </div>
 			 
 			              <button type="submit" class="btn btn-primary mr-2">Cadastrar</button>
@@ -46,6 +70,9 @@
 			      </div>
 			     </div>
 			</div>
+
+
+			
 		    
 		</div>
 	</div>
