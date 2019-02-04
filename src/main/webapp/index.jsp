@@ -6,30 +6,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Ponto de Vendas</title>
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="view/static/vendors/iconfonts/mdi/font/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="view/static/vendors/css/vendor.bundle.base.css">
-  <link rel="stylesheet" href="view/static/vendors/css/vendor.bundle.addons.css">
-  <!-- endinject -->
-  <!-- plugin css for this page -->
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="view/static/css/vertical-layout-light/style.css">
-  <!-- endinject -->
+
+  <%@ include file="../../basicCSS.jsp" %>
+  
+  
   <link rel="shortcut icon" href="view/static/images/logo-mini.png" />
 </head>
 <body class="sidebar-mini">
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     
-    <%@ include file="topMenu.jsp" %>
-
+    <%@ include file="../../topMenu.jsp" %>
+    
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
     
-    <%@ include file="sideMenu.jsp" %>
-      
-      
+      <%@ include file="../../sideMenu.jsp" %>
+
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
@@ -38,10 +31,7 @@
           
           
             <div class="col-lg-4 grid-margin">
-            
-            
-            
-            
+
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Produtos por categoria</h4>
@@ -49,49 +39,7 @@
                   <div id="sales-status-chart-legend" class="mt-3 chartjs-legend"></div>
                 </div>
               </div>
-              
-              
-              
-<!-- 			<div class="card d-flex flex-column justify-content-between"> -->
-<!--                 <div class="card-body"> -->
-<!--                   <div class="d-flex justify-content-between align-items-start"> -->
-<!--                     <h4 class="card-title">Receita</h4> -->
-<!--                     <div class="dropdown mb-4"> -->
-<!--                       <button class="btn btn-sm btn-outline-secondary btn-rounded dropdown-toggle text-black" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
-<!--                         Esta semana -->
-<!--                       </button> -->
-<!--                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1"> -->
-<!--                         <a class="dropdown-item" href="#">Este dia</a> -->
-<!--                         <div class="dropdown-divider"></div> -->
-<!--                         <a class="dropdown-item" href="#">Este mês</a> -->
-<!--                         <div class="dropdown-divider"></div> -->
-<!--                         <a class="dropdown-item" href="#">Esta semana</a> -->
-<!--                         <div class="dropdown-divider"></div> -->
-<!--                         <a class="dropdown-item" href="#">Este ano</a> -->
-<!--                       </div> -->
-<!--                     </div> -->
-<!--                   </div> -->
-<!--                   <h4 class="font-weight-light">Receita total</h4> -->
-<!--                   <h1 class="font-weight-normal mb-0">36568</h1> -->
-<!--                   <div class="d-md-flex justify-content-start mt-5"> -->
-<!--                     <div class="mb-3 mb-lg-0"> -->
-<!--                       <h4 class="font-weight-light text-primary">+40%</h4> -->
-<!--                       <p class="text-primary mb-0">Crescimento</p> -->
-<!--                     </div> -->
-<!--                     <div class="mb-3 mb-lg-0 ml-md-4"> -->
-<!--                       <h4 class="font-weight-light text-danger">2.5%</h4> -->
-<!--                       <p class="text-danger mb-0">Devoluções</p> -->
-<!--                     </div> -->
-<!--                   </div> -->
-<!--                 </div> -->
-<!--                 <div class="card-body px-0 pb-0 d-flex flex-column justify-content-between"> -->
-<!--                   <canvas id="statistics-chart" class="mt-auto"></canvas> -->
-<!--                 </div> -->
-<!--               </div> -->
-            
-            
-            
-             
+
             </div>
             
             
@@ -126,7 +74,7 @@
                       
                       <button type="button" class="btn btn-inverse-danger btn-icon">
                           <i class="mdi mdi-plus"></i>
-                        </button>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -157,7 +105,7 @@
                       
                       <button type="button" class="btn btn-inverse-success btn-icon">
                           <i class="mdi mdi-plus"></i>
-                        </button>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -271,26 +219,9 @@
               
             </div>
           </div>
-          
-          <div class="row">
-            <div class="col-lg-4 grid-margin stretch-card">
-            
-            
-
-
-            </div>
-          </div>
-		  
-		  
+  
         </div>
         <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019 <a href="https://www.goinf.com.br/" target="_blank">GoInf</a>. Todos direitos reservados.</span>
-          </div>
-        </footer>
-        <!-- partial -->
       </div>
       <!-- main-panel ends -->
     </div>
@@ -298,22 +229,13 @@
   </div>
   <!-- container-scroller -->
 
-  <!-- plugins:js -->
-  <script src="view/static/vendors/js/vendor.bundle.base.js"></script>
-  <script src="view/static/vendors/js/vendor.bundle.addons.js"></script>
-  <!-- endinject -->
-  <!-- Plugin js for this page-->
-  <!-- End plugin js for this page-->
-  <!-- inject:js -->
-  <script src="view/static/js/off-canvas.js"></script>
-  <script src="view/static/js/hoverable-collapse.js"></script>
-  <script src="view/static/js/template.js"></script>
-  <script src="view/static/js/settings.js"></script>
-  <script src="view/static/js/todolist.js"></script>
-  <!-- endinject -->
+  <%@ include file="../../basicJS.jsp" %>
+
   <!-- Custom js for this page-->
   <script src="view/static/js/dashboard.js"></script>
   <!-- End custom js for this page-->
+  
+  
 </body>
 
 </html>

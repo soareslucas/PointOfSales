@@ -33,7 +33,7 @@
                 <li class="nav-item"> <a class="nav-link" href="category/list">Categorias</a></li>
                 <li class="nav-item"> <a class="nav-link" href="itemtype/list">Tipos de Item</a></li>
 				<li class="nav-item"> <a class="nav-link" href="unit/list">Unidades de medida</a></li>
-				<li class="nav-item"> <a class="nav-link" href="newBrand">Marcas</a></li>
+				<li class="nav-item"> <a class="nav-link" href="brandList">Marcas</a></li>
               </ul>
             </div>
           </li>

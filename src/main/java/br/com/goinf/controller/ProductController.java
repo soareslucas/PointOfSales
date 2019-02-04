@@ -14,8 +14,9 @@ public class ProductController {
 
 	
 @RequestMapping("new")
-public String form() {
-return "product/new";
+public ModelAndView form() {
+	ModelAndView mv = new ModelAndView("product/new");
+	return mv;
 }
 
 

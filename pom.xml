@@ -110,6 +110,38 @@
 		    <artifactId>tomcat-dbcp</artifactId>
 		    <version>${tomcat-dbcp.version}</version>
 		</dependency>
+		
+		<dependency>
+		    <groupId>antlr</groupId>
+		    <artifactId>antlr</artifactId>
+		    <version>2.7.7</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>dom4j</groupId>
+		    <artifactId>dom4j</artifactId>
+		    <version>1.6.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javassist</groupId>
+		    <artifactId>javassist</artifactId>
+		    <version>3.12.1.GA</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.jboss.logging</groupId>
+		    <artifactId>jboss-logging</artifactId>
+		    <version>3.3.2.Final</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.jboss.spec.javax.transaction</groupId>
+		    <artifactId>jboss-transaction-api_1.1_spec</artifactId>
+		    <version>1.0.1.Final</version>
+		</dependency>
+		
+		
   
 
 		<!-- VALIDATION -->
