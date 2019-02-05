@@ -47,6 +47,10 @@
 			              <div class="form-group">
 			                <label for="exampleInputUsername1">Nome</label>
 			                
+			                <c:if test="${not empty brand.id}">
+	                			<input type="hidden" value="${brand.id}" class="form-control" id="id" name="id" placeholder="Nome da Marca">
+							</c:if>
+			                
 			                
 			                
 			                <c:choose>
