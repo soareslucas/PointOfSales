@@ -3,21 +3,19 @@ package br.com.goinf.DAO;
 
 import java.util.List;
 import javax.persistence.*;
+
+import org.springframework.stereotype.Repository;
+
 import br.com.goinf.entities.Brand;;
 
+
+@Repository
 public class BrandDAO
 {
+	
+	@PersistenceContext
+	private EntityManager entityManager;
 
-    public BrandDAO(){
-        entityManager = getEntityManager();
-    }
-
-    private EntityManager getEntityManager(){
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("PointOfSales");
-        if(entityManager == null)
-            entityManager = factory.createEntityManager();
-        return entityManager;
-    }
 
     public Brand getById(int id){
         return (Brand)entityManager.find(br.com.goinf.entities.Brand.class, Integer.valueOf(id));
@@ -78,5 +76,4 @@ public class BrandDAO
         }
     }
 
-    protected EntityManager entityManager;
 }

@@ -2,6 +2,8 @@ package br.com.goinf.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import br.com.goinf.entities.Brand;
@@ -17,15 +19,14 @@ import javax.annotation.PostConstruct;
 @Controller
 public class BrandController {
 	
-//	private BrandDomain brandDomain;
-//	
-//    @PostConstruct
-//    public void init() {
-//    	brandDomain = new BrandDomain();
-//    }
-//	
-
-	
+	@Qualifier("brandDomain")
+	private BrandDomain brandDomain;
+	   
+	@Autowired
+	public BrandController(BrandDomain brandDomain) {
+	    this.brandDomain = brandDomain;
+	}
+	 	
 	@RequestMapping("newBrand")
 	public String newBrand() {
 		return "brand/new";
@@ -33,7 +34,6 @@ public class BrandController {
 	
 	@RequestMapping("brandList")
 	public ModelAndView brandList() {
-		BrandDomain brandDomain = new BrandDomain();
 		List<Brand> brands = null;
 		brands = (List<Brand>)brandDomain.getList();		
 		ModelAndView mv = new ModelAndView("brand/list");
@@ -52,7 +52,6 @@ public class BrandController {
 			mv.addObject("error", "Campo obrigatório não preenchido!");
 
 		} else{ 
-			BrandDomain brandDomain = new BrandDomain();
 			brandDomain.save(brand);		
 			mv = new ModelAndView("forward:brandList");
 			mv.addObject("message", "Cadastro realizado com sucesso!");
@@ -65,7 +64,6 @@ public class BrandController {
 	@RequestMapping("deleteBrand")
 	public ModelAndView deleteBrand(Brand brand) {
 		ModelAndView mv = null;
-		BrandDomain brandDomain = new BrandDomain();
 		brandDomain.delete(brand);
 		mv = new ModelAndView("forward:brandList");
 		mv.addObject("message", "Marca excluída com sucesso!");		
@@ -75,7 +73,6 @@ public class BrandController {
 	
 	@RequestMapping("editBrand")
 	public ModelAndView editBrand(Brand brand) {
-		BrandDomain brandDomain = new BrandDomain();
 
 		brand = brandDomain.load(brand.getId());
 		ModelAndView mv = null;
@@ -89,7 +86,6 @@ public class BrandController {
 	@RequestMapping("updateBrand")
 	public ModelAndView updateBrand(Brand brand) {
 		ModelAndView mv = null;
-		BrandDomain brandDomain = new BrandDomain();
 		brandDomain.update(brand);
 		mv = new ModelAndView("forward:brandList");
 		mv.addObject("message", "Marca atualizada com sucesso!");		

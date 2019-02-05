@@ -2,20 +2,20 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 						http://www.springframework.org/schema/context
 						http://www.springframework.org/schema/context/spring-context-3.0.xsd
 						http://www.springframework.org/schema/mvc
 						http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
-						">
+						http://www.springframework.org/schema/tx
+        				http://www.springframework.org/schema/tx/spring-tx.xsd ">
  
 	<context:component-scan base-package="br.com.goinf.controller"/>
 	
 	<mvc:default-servlet-handler />
 	<mvc:annotation-driven/>
-	
-	
  
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		
@@ -27,5 +27,35 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
+	
+	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="org.postgresql.Driver"/>
+		<property name="url" value="jdbc:postgresql://localhost:5432/sysdist"/>
+		<property name="username" value="postgres"/>
+		<property name="password" value="Ls-12063105"/>
+	</bean>
+	
+	
+	<bean id="entityManagerFactory"
+		class= "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="mysqlDataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+		</property>
+	</bean>
+	
+	
+	<tx:annotation-driven/>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory"/>
+	</bean>
+	
+	
+	
+			
+	
+	
 	
 </beans>
