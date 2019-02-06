@@ -1,4 +1,4 @@
-package br.com.goinf.domain;
+package br.com.goinf.servicesimpl;
 
 import java.util.List;
 
@@ -8,23 +8,18 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.goinf.DAO.BrandDAO;
-import br.com.goinf.ServicesInterfaces.BrandService;
+import br.com.goinf.dao.BrandDAO;
 import br.com.goinf.entities.Brand;
+import br.com.goinf.servicesinterfaces.BrandService;
 
+
+@Service("BrandService")
 @Transactional
-@Service
-public class BrandDomain implements BrandService{
-	
-	private BrandDAO brandDAO;
+public class BrandServiceImpl implements BrandService{
 	
 	@Autowired
-    @Override
-	public void BrandDomain(BrandDAO brandDAO) {
-		this.brandDAO = brandDAO;
-	}
+	private BrandDAO brandDAO;
 	
-    
 	public void save(Brand brand) {
     	brandDAO.persist(brand);
 	}

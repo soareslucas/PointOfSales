@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 /**
@@ -38,6 +39,7 @@ public class Brand implements java.io.Serializable {
 
 	@Id
 	@GeneratedValue
+	@SequenceGenerator(name="BRAND_SEQ", sequenceName="BRAND_SEQ", allocationSize=1)
 	@Column(name = "id", unique = true, nullable = false)
 	public int getId() {
 		return this.id;

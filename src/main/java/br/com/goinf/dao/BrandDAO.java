@@ -1,5 +1,5 @@
 
-package br.com.goinf.DAO;
+package br.com.goinf.dao;
 
 import java.util.List;
 import javax.persistence.*;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import br.com.goinf.entities.Brand;;
 
 
-@Repository
+@Repository("BrandDAO")
 public class BrandDAO
 {
 	
@@ -27,42 +27,31 @@ public class BrandDAO
 
     public void persist(Brand brand){
         try{
-            entityManager.getTransaction().begin();
             entityManager.persist(brand);
-            entityManager.getTransaction().commit();
-            entityManager.refresh(brand);
         }
         catch(Exception ex){
             ex.printStackTrace();
-            entityManager.getTransaction().rollback();
         }
     }
 
     public void merge(Brand brand){
         try{
-            entityManager.getTransaction().begin();
             Brand persisted = getById(brand.getId());
             persisted.setName(brand.getName());
             entityManager.merge(persisted);
-            entityManager.getTransaction().commit();
-            entityManager.refresh(brand);
         }
         catch(Exception ex){
             ex.printStackTrace();
-            entityManager.getTransaction().rollback();
         }
     }
 
     public void remove(Brand brand){
         try{
-            entityManager.getTransaction().begin();
             brand = (Brand)entityManager.find(br.com.goinf.entities.Brand.class, brand.getId());
             entityManager.remove(brand);
-            entityManager.getTransaction().commit();
         }
         catch(Exception ex){
             System.out.println(ex.toString());
-            entityManager.getTransaction().rollback();
         }
     }
 
