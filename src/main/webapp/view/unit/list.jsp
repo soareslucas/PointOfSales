@@ -36,14 +36,14 @@
 				          		<nav aria-label="breadcrumb">
 			                      <ol class="breadcrumb breadcrumb-custom">
 			                        <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
-			                        <li aria-current="page" class="breadcrumb-item active"><span>Lista de Marcas</span></li>
+			                        <li aria-current="page" class="breadcrumb-item active"><span>Lista de Unidades de Medida</span></li>
 			                      </ol>
 			                    </nav>
 
 			          		</div>
 			          		<div class="form-group col-2"> 
 			          					          		
-			          			<button onclick="window.location='newBrand'" type='button' class='btn btn-inverse-success'> 
+			          			<button onclick="window.location='newUnit'" type='button' class='btn btn-inverse-success'> 
 								  	ADICIONAR <i class='mdi mdi-plus'></i>
 								</button> 
 			          		</div>
@@ -63,22 +63,22 @@
 				                  </thead>
 				                  <tbody>
 				                  
-		  							<c:forEach items="${brands}" var="brand">
+		  							<c:forEach items="${units}" var="unit">
 		  															
-					                    <tr id="brand_${brand.id}">
+					                    <tr id="unit_${unit.id}">
 					                        <td>
-					                        	${brand.id}
+					                        	${unit.id}
 	                  				                <input type="hidden" class="form-control" id="id" name="id">
 					                        </td>
-					                        <td>${brand.name}</td>
+					                        <td>${unit.name}</td>
 					                        <td>
 		
 		
-					                          <button onclick="window.location='editBrand?id=${brand.id}'" class="btn btn-outline-primary">Editar
+					                          <button onclick="window.location='editUnit?id=${unit.id}'" class="btn btn-outline-primary">Editar
 					                          	<i class="fa fa-edit"></i>
 					                          </button>
 					                          
-					                          <button onclick="deleta(${brand.id})" class="btn btn-outline-primary">Excluir
+					                          <button onclick="window.location='deleteUnit?id=${unit.id}'" class="btn btn-outline-primary">Excluir
 					                          	<i class="fa  fa-trash-o"></i>
 					                          </button>
 					                        </td>
@@ -98,26 +98,8 @@
 			</div>
 		</div>
 	</div>
-	
 
 	<%@ include file="../../basicJS.jsp" %>
-	
-	<script>
-
-		function deleta(idBrand){			
-			
-			$.post( "deleteBrand", { id: idBrand})
-			  .done(function( data ) {
-
-				  window.open(data);  
-			    
-			  });
-
-		}
-			
-
-
-	</script>
   
 	<!-- custom JS -->
 	<script src="view/static/js/data-table.js"></script>

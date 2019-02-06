@@ -55,7 +55,7 @@ public class BrandController {
 	public ModelAndView deleteBrand(Brand brand) {
 		ModelAndView mv = null;
 		brandService.delete(brand);
-		mv = new ModelAndView("forward:brandList");
+		mv = new ModelAndView("redirect:brandList");
 		mv.addObject("message", "Marca excluída com sucesso!");		
 		return mv;
 	}

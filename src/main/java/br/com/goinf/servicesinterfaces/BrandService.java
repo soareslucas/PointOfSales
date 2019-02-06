@@ -1,10 +1,6 @@
 package br.com.goinf.servicesinterfaces;
 
 import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
-import br.com.goinf.dao.BrandDAO;
 import br.com.goinf.entities.Brand;
 
 public interface  BrandService {

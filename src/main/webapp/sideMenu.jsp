@@ -8,14 +8,14 @@
           </li>
 		  
 		  <li class="nav-item">
-            <a class="nav-link" href="pdv/new">
+            <a class="nav-link" href="pdv">
               <i class="mdi mdi-cash-multiple menu-icon"></i>
               <span class="menu-title">PDV</span>
             </a>
           </li>
 		  
   		  <li class="nav-item">
-            <a class="nav-link" href="product/new">
+            <a class="nav-link" href="stock">
               <i class="mdi mdi-stocking menu-icon"></i>
               <span class="menu-title">Estoque</span>
             </a>
@@ -29,10 +29,10 @@
             </a>
             <div class="collapse" id="catalog">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="product/new">Produtos</a></li>
-                <li class="nav-item"> <a class="nav-link" href="category/list">Categorias</a></li>
-                <li class="nav-item"> <a class="nav-link" href="itemtype/list">Tipos de Item</a></li>
-				<li class="nav-item"> <a class="nav-link" href="unit/list">Unidades de medida</a></li>
+                <li class="nav-item"> <a class="nav-link" href="productList">Produtos</a></li>
+                <li class="nav-item"> <a class="nav-link" href="categoryList">Categorias</a></li>
+                <li class="nav-item"> <a class="nav-link" href="itemtypeList">Tipos de Item</a></li>
+				<li class="nav-item"> <a class="nav-link" href="unitList">Unidades de medida</a></li>
 				<li class="nav-item"> <a class="nav-link" href="brandList">Marcas</a></li>
               </ul>
             </div>
@@ -46,11 +46,11 @@
             </a>
             <div class="collapse" id="purchases">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/supplier.html">Fornecedores</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/budget.html">Orçamentos</a></li>
-				<li class="nav-item"> <a class="nav-link" href="pages/ui-features/order.html">Pedidos</a></li>
-				<li class="nav-item"> <a class="nav-link" href="pages/ui-features/devolutions.html">Devoluções</a></li>
-				<li class="nav-item"> <a class="nav-link" href="pages/ui-features/paymenttype.html">Tipos de pagamento</a></li>
+                <li class="nav-item"> <a class="nav-link" href=supplierList">Fornecedores</a></li>
+                <li class="nav-item"> <a class="nav-link" href="budgetList">Orçamentos</a></li>
+				<li class="nav-item"> <a class="nav-link" href="orderList">Pedidos</a></li>
+				<li class="nav-item"> <a class="nav-link" href="devolutionList">Devoluções</a></li>
+				<li class="nav-item"> <a class="nav-link" href="paymenttypeList">Tipos de pagamento</a></li>
               </ul>
             </div>
           </li>
@@ -63,11 +63,11 @@
             </a>
             <div class="collapse" id="sales">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="client/list">Clientes</a></li>
-                <li class="nav-item"> <a class="nav-link" href="budge/list">Orçamentos</a></li>
-				<li class="nav-item"> <a class="nav-link" href="order/list">Pedidos</a></li>
-				<li class="nav-item"> <a class="nav-link" href="devolution/list">Devoluções</a></li>
-				<li class="nav-item"> <a class="nav-link" href="paymenttype/list">Tipos de pagamento</a></li>
+                <li class="nav-item"> <a class="nav-link" href="clientList">Clientes</a></li>
+                <li class="nav-item"> <a class="nav-link" href="budgetList">Orçamentos</a></li>
+				<li class="nav-item"> <a class="nav-link" href="orderList">Pedidos</a></li>
+				<li class="nav-item"> <a class="nav-link" href="devolutionList">Devoluções</a></li>
+				<li class="nav-item"> <a class="nav-link" href="paymenttypeList">Tipos de pagamento</a></li>
               </ul>
             </div>
           </li>

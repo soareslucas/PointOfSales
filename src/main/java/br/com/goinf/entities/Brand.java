@@ -38,12 +38,15 @@ public class Brand implements java.io.Serializable {
 	}
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="BRAND_SEQ")
 	@SequenceGenerator(name="BRAND_SEQ", sequenceName="BRAND_SEQ", allocationSize=1)
 	@Column(name = "id", unique = true, nullable = false)
 	public int getId() {
 		return this.id;
 	}
+	
+//	CREATE SEQUENCE UNIT_SEQ;
+//	ALTER TABLE unit ALTER COLUMN id SET DEFAULT nextval('UNIT_SEQ');
 
 	public void setId(int id) {
 		this.id = id;
